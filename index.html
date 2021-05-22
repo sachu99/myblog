@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>My Blog</title>
+  <style>
+    .containers {
+      /* border: 2px solid red; */
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+      /* margin-right: 180px; */
+      box-shadow: 5px 5px 5px;
+      margin-left: 0px;
+    }
+
+    #card1 {
+      margin: auto;
+      box-shadow: 5px 5xp 5px;
+    }
+
+    #card2 {
+      margin: auto;
+
+      border: 2px solid rgb(202, 12, 12);
+    }
+
+    .text {
+      margin-top: 50px;
+    }
+
+    #login {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      /* border: 2px solid rgb(202, 12, 12); */
+
+
+    }
+
+    .signup {
+      /* border: 2px solid rgb(47, 12, 202); */
+      margin: 5px;
+      margin-top: -10px;
+      margin-bottom: -10px;
+      border-radius: 70px;
+
+    }
+
+    #search {
+      margin-top: -5px;
+      margin-bottom: -5px;
+      background-color: rgb(235, 196, 192);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="container"> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a type="button" class="btn btn-outline-light" type="button" class="btn btn-primary btn-lg" class="navbar-brand"
+        href="#">MY BLOGS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Movies Reviews</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">International News</a></li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Tech News</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Govt Job News</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">City Popular <span class="badge rounded-pill bg-info text-dark"
+                    class="badge bg-info text-dark" class="badge bg-secondary">New</span></a> </li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact US</a>
+          </li>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div>
+          <button class="btn btn-outline-secondary" type="submit" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button>
+          <button class="btn btn-outline-danger" type="submit" data-bs-toggle="modal"
+            data-bs-target="#signupModal">Sign-up</button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to My Blog</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email id">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Signup to My Blog</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Your Name">
+
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter your Email id">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+            </div>
+            <div class="mb-3">
+              <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1"
+                placeholder="Enter confirm password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Mobile number</label>
+              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter mobile number">
+
+              </div>
+
+              <button type="submit" class="btn btn-primary">Sign-up</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1200x300/?nature,water" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="color: rgb(255, 217, 5);">WELCOME TO MY BLOGS</h1>
+          <p>Welcome to ocean of knowledege</p>
+          <button type="button" class="btn btn-primary">Tech News</button>
+          <button type="button" class="btn btn-danger">Movies Reviews</button>
+          <button type="button" class="btn btn-info">City Popular</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1200x300/?nature,pyhton" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Tech News</h2>
+          <p>Tech news for phone , laptop , gadets .</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1200x300/?nature,hill" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>JOBS</h2>
+          <p>Goverment Jobs Information .</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/600x300/?nature,moon" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SBI vacancy</h5>
+            <p class="card-text">The SBI Clerk Notification 2021 for Junior Associates (Customer Support and Sales) has
+              been released by State Bank of India on April 26, 2021. The notification is updated below post the release
+              of official notification at the official website of SBI i.e. http://sbi.co.in. Let's have a look at the
+              SBI PO notification PDr.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/600x300/?nature,animal" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">What is black fungus?</h5>
+            <p class="card-text">The black fungus infection, also known as mucormycosis, is caused by a fungus called
+              mucor.Recently, several states have flagged cases of COVID-triggered mucormycosis, especially among
+              patients who are diabetic.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/600x300/?mobile" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Motorola Moto G 5G Plus</h5>
+            <p class="card-text">Moto G 5G Plus price in India is expected to be Rs. 29,490. Moto G 5G Plus Expected to
+              be launched on Jul 22, 2021. This is 4 GB RAM / 64 GB internal storage base variant of Moto G 5G Plus
+              which is expected to available in Surfing Blue colour..</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://source.unsplash.com/600x300/?movies" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Radhe Flop</h5>
+            <p class="card-text">In this Corona induced lockdown, I caught up on some of the old '80s Hindi films which
+              I had missed then. Most of these actioners would invariably have Dharmendra or Mithun Chakraborty fighting
+              out the villains for reason no one cared for. The plot didn't matter here; the hero did. Radhe is exactly
+              that film. Only it has the present day superstar Salman Khan in place of Dharam or Mithunda, and just like
+              them, bhai pulls off the non-existent script entirely on his shoulders. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containers container-fluid">
+
+    <div class="card mb-3" style="max-width: 540px;" id="card1">
+      <div class="row g-0">
+        <div class="col-md-4 col-sm-2 img-fluid">
+          <img src="https://source.unsplash.com/170x220/?nature,sun" alt="...">
+        </div>
+        <div class="col-md-8 col-sm-7" class="text">
+          <div class="card-body">
+            <h5 class="card-title">Patna</h5>
+            <p class="card-text">Patna is an ancient city that sprawls along the south bank of the Ganges River in
+              Bihar, northeast India. The state capital, it’s home to Bihar Museum, a contemporary landmark exhibiting
+              bronze.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" id="Delhi" style="max-width: 540px;" id="card2">
+      <div class="row g-0">
+        <div class="col-md-4 col-sm-2 img-fluid">
+          <img src="https://source.unsplash.com/170x220/?nature,india" alt="...">
+        </div>
+        <div class="col-md-8 col-sm-7" class="text">
+          <div class="card-body">
+            <h5 class="card-title">DElhi</h5>
+            <p class="card-text">Delhi, India’s capital territory, is a massive metropolitan area in the country’s
+              north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol
+              of India, and.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bd-footer py-5 mt-5 bg-light">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-3 mb-3 ">
+          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+            aria-label="Bootstrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94"
+              role="img">
+              <title>Bootstrap</title>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                fill="currentColor"></path>
+            </svg>
+            <span class="fs-5">My Blogs</span>
+          </a>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2">Designed and built with all the love in the world by sachinkujapi@gmail.com </li>
+
+
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="">Tech</a></li>
+            <li class="mb-2"><a href="">Movies Reviews</a></li>
+            <li class="mb-2"><a href="">Govt Job</a></li>
+            <li class="mb-2"><a href="">City popular</a></li>
+            <li class="mb-2"><a href="">International News</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2 fab fa-facebook">facebook</i></li>
+            <li class="mb-2"></li>sachinkujapi@gmail.com</li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- </div> -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
